@@ -1,4 +1,4 @@
-name: Deploy to Azure App - Kyndryl
+name: Deploy to Azure App - Kyndryl - DCAzo
 
 on:
   push:
