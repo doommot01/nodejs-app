@@ -1,22 +1,22 @@
-name: Deploy to Azure App - Kyndryl - DCAzo
+name: Deploy to Azure App Service
 
 on:
-  push:
-    branches:
+  push: 
+    branches: 
       - main
-    
-jobs:
-  build:
+
+jobs: 
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
-      - name: Set Node.js Version
+      - name: Setup Node.js version
         uses: actions/setup-node@v4
-        with:
+        with: 
           node-version: '18.x'
       - name: Install Dependencies
-        run : npm install
+        run: npm install
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v2
         with:
