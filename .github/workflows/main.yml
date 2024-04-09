@@ -21,3 +21,4 @@ jobs:
         with:
           app-name: kyndrylpeapp01
           publish-profile: ${{ secrets.AZURE_DCAZO }}
+          package: .
